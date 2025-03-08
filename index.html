@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobach Verde</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'SF Pro Display', sans-serif;
+            background-color: #f5f5f7;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 120px;
+            margin-right: 15px;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: 600;
+        }
+        .hero {
+            width: 100%;
+            height: 60vh;
+            background: url('https://source.unsplash.com/1920x1080/?forest,green') center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #d4f8d4;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #c2eac2;
+            transform: scale(1.05);
+        }
+        .section {
+            width: 80%;
+            max-width: 1000px;
+            background-color: white;
+            padding: 40px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .section img {
+            width: 150px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .intro {
+            width: 80%;
+            max-width: 1000px;
+            background-color: white;
+            padding: 40px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+        .intro img {
+            width: 300px;
+            border-radius: 10px;
+            margin-right: 40px;
+            transition: transform 0.3s ease;
+        }
+        .intro img:hover {
+            transform: scale(1.05);
+        }
+        .intro-text {
+            flex: 1;
+        }
+        .intro-text h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .intro-text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 15px 0;
+            margin-top: auto;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+            .section {
+                width: 90%;
+                padding: 30px;
+            }
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+            .intro img {
+                width: 250px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://media.discordapp.net/attachments/1327861081804242966/1347845134175436851/CobachVerde.png?ex=67cd4e19&is=67cbfc99&hm=2b0fa4e9cf0bca8107844c839a321f4371702ddcdcf5eb43ed3ed497646f7bf0&=&format=webp&quality=lossless" alt="Logo Cobach" class="logo">
+        <h1>Cobach Verde</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>La naturaleza es vida, así que cuidala.</h2>
+            <p>Explora cómo los árboles impactan positivamente en nuestro planeta y cómo puedes contribuir.</p>
+            <button class="button" onclick="irA('main.html')">Explorar</button>
+        </section>
+        <section class="intro">
+            <img src="https://media.discordapp.net/attachments/1327861081804242966/1347858215022628884/Sin_titulo_200_x_500_px.png?ex=67cd5a48&is=67cc08c8&hm=2b85374c5eaab8c4ba05f18582194af1fd81552db91928d5729b8cb0a7b9fb42&=&format=webp&quality=lossless" alt="Daniel Alejandro Félix Escobar" style="width: 250px;">
+            <div class="intro-text">
+                <h2>Sobre mí</h2>
+                <p>
+                    Soy Daniel Alejandro Félix Escobar, alumno del Colegio de Bachilleres (Cobach) Plantel V, ubicado en Hermosillo, Sonora. Desde siempre, he sentido un profundo interés por el cuidado del medio ambiente, convencido de que cada pequeña acción cuenta para preservar nuestro planeta. Como miembro activo de <strong>Cobach Verde</strong>, una asociación dedicada a la reforestación y concientización ambiental en Hermosillo, he tenido la oportunidad de contribuir directamente a la plantación de árboles y a la promoción de prácticas sostenibles.
+                </p>
+                <p>
+                    Esta página nace de mi deseo de informar y motivar a más personas a unirse a esta causa. Aquí encontrarás información sobre los beneficios de plantar árboles, cómo puedes ayudar y por qué es crucial actuar ahora. Juntos, podemos hacer la diferencia y construir un futuro más verde y sostenible.
+                </p>
+            </div>
+        </section>
+        <section class="section">
+            <img src="https://media.discordapp.net/attachments/1327861081804242966/1347845134175436851/CobachVerde.png?ex=67cd4e19&is=67cbfc99&hm=2b0fa4e9cf0bca8107844c839a321f4371702ddcdcf5eb43ed3ed497646f7bf0&=&format=webp&quality=lossless" alt="Ecología">
+            <h2>¿Por qué unirte a Cobach Verde?</h2>
+            <p>Descubre las razones por las que deberías ser parte de esta iniciativa y cómo puedes marcar la diferencia.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Impacto ambiental</h3>
+                    <p>Contribuye a reducir la huella de carbono y a mejorar la calidad del aire.</p>
+                </div>
+                <div class="card">
+                    <h3>Comunidad</h3>
+                    <p>Únete a un grupo de personas comprometidas con el medio ambiente.</p>
+                </div>
+                <div class="card">
+                    <h3>Educación</h3>
+                    <p>Aprende sobre la importancia de los árboles y cómo cuidarlos.</p>
+                </div>
+                <div class="card">
+                    <h3>Futuro sostenible</h3>
+                    <p>Ayuda a construir un futuro más verde y sostenible para las próximas generaciones.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <img src="https://intermedia.eus/wp-content/uploads/2015/09/mision.png" alt="Mundo Ecológico">
+            <h2>Nuestra misión</h2>
+            <p>En Cobach Verde nos dedicamos a promover la reforestación y la conciencia ambiental en Hermosillo y más allá.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Cobach Verde. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function irA(pagina) {
+            window.location.href = pagina;
+        }
+    </script>
+</body>
+</html>
