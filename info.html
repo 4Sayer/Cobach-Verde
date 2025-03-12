@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobach Verde - Aprender Más</title>
+    <title>Cobach Verde - Comparaciones</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -139,6 +139,33 @@
             line-height: 1.6;
             color: #777;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            animation: slideIn 1s ease-in-out;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #d4f8d4;
+            color: black;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
         footer {
             width: 100%;
             background-color: white;
@@ -176,67 +203,118 @@
     </header>
     <main>
         <section class="hero">
-            <h2>Bienvenido a Cobach Verde</h2>
-            <p>Descubre cómo podemos trabajar juntos para crear un futuro más sostenible y lleno de vida.</p>
+            <h2>Comparaciones</h2>
+            <p>Explora datos comparativos y acciones que puedes tomar para cuidar el medio ambiente.</p>
         </section>
         <section class="section">
-            <img src="https://cdn-icons-png.flaticon.com/512/4284/4284490.png" alt="Ecología">
-            <h2>Beneficios de Plantar Árboles</h2>
-            <p>Los árboles son fundamentales para nuestro planeta. Aquí te explicamos por qué deberías unirte a nuestra causa:</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>Oxígeno</h3>
-                    <p>Los árboles producen oxígeno, esencial para la vida en la Tierra.</p>
-                </div>
-                <div class="card">
-                    <h3>Absorción de CO2</h3>
-                    <p>Ayudan a reducir el dióxido de carbono, uno de los principales gases de efecto invernadero.</p>
-                </div>
-                <div class="card">
-                    <h3>Biodiversidad</h3>
-                    <p>Proporcionan hábitats para numerosas especies de animales y plantas.</p>
-                </div>
-                <div class="card">
-                    <h3>Clima</h3>
-                    <p>Regulan la temperatura y reducen el efecto de isla de calor en las ciudades.</p>
-                </div>
-                <div class="card">
-                    <h3>Salud Mental</h3>
-                    <p>Estar cerca de árboles y áreas verdes reduce el estrés y mejora el bienestar.</p>
-                </div>
-                <div class="card">
-                    <h3>Agua Limpia</h3>
-                    <p>Los árboles filtran el agua y ayudan a mantener los ciclos hidrológicos.</p>
-                </div>
-            </div>
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-ecologia-8185848-6558774.png?f=webp" alt="Ecología">
+            <h2>Tabla Comparativa: Beneficios de los Árboles</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Acción</th>
+                        <th>Impacto Positivo</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plantar un árbol</td>
+                        <td>Absorbe CO2 y produce oxígeno</td>
+                        <td>Un árbol adulto absorbe 22 kg de CO2 al año</td>
+                    </tr>
+                    <tr>
+                        <td>Reciclar papel</td>
+                        <td>Reduce la tala de árboles</td>
+                        <td>1 tonelada de papel reciclado salva 17 árboles</td>
+                    </tr>
+                    <tr>
+                        <td>Usar transporte público</td>
+                        <td>Reduce emisiones de carbono</td>
+                        <td>Un autobús reduce 40 coches en la carretera</td>
+                    </tr>
+                    <tr>
+                        <td>Reducir el consumo de plástico</td>
+                        <td>Disminuye la contaminación</td>
+                        <td>1 botella de plástico tarda 450 años en degradarse</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section class="section">
-            <img src="https://cdn.pixabay.com/photo/2021/10/27/21/42/green-6748343_1280.png" alt="Mundo Ecológico">
-            <h2>¿Cómo Puedes Ayudar?</h2>
-            <p>Hay muchas maneras en las que puedes contribuir a la reforestación y al cuidado del medio ambiente:</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>Planta Árboles</h3>
-                    <p>Participa en campañas de reforestación o planta árboles en tu comunidad.</p>
-                </div>
-                <div class="card">
-                    <h3>Recicla</h3>
-                    <p>Reduce, reutiliza y recicla para minimizar tu huella ecológica.</p>
-                </div>
-                <div class="card">
-                    <h3>Educa</h3>
-                    <p>Comparte información sobre la importancia de los árboles y el medio ambiente.</p>
-                </div>
-                <div class="card">
-                    <h3>Apoya Iniciativas</h3>
-                    <p>Colabora con organizaciones que trabajan en la conservación del medio ambiente.</p>
-                </div>
-            </div>
+            <img src="https://cdn.pixabay.com/photo/2023/04/06/10/22/earth-day-7903523_1280.png" alt="Tierra">
+            <h2>Tabla Comparativa: Energías Renovables vs. No Renovables</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Energía</th>
+                        <th>Ventajas</th>
+                        <th>Desventajas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Energía Solar</td>
+                        <td>Renovable, no contamina</td>
+                        <td>Depende del clima y requiere espacio</td>
+                    </tr>
+                    <tr>
+                        <td>Energía Eólica</td>
+                        <td>Renovable, bajo costo operativo</td>
+                        <td>Impacto visual y sonoro</td>
+                    </tr>
+                    <tr>
+                        <td>Petróleo</td>
+                        <td>Alta densidad energética</td>
+                        <td>Contamina y es no renovable</td>
+                    </tr>
+                    <tr>
+                        <td>Carbón</td>
+                        <td>Barato y abundante</td>
+                        <td>Altamente contaminante</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
         <section class="section">
-            <img src="https://cdn-icons-png.flaticon.com/512/8044/8044650.png" alt="Naturaleza">
-            <h2>Únete a la Causa</h2>
-            <p>¡Cada árbol cuenta! Únete a nuestra iniciativa y ayuda a hacer del mundo un lugar mejor. Juntos podemos marcar la diferencia.</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/3438/3438381.png" alt="Reciclaje">
+            <h2>Tabla Comparativa: Tipos de Reciclaje</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Proceso</th>
+                        <th>Beneficio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Papel</td>
+                        <td>Se tritura y se convierte en pulpa</td>
+                        <td>Reduce la tala de árboles</td>
+                    </tr>
+                    <tr>
+                        <td>Plástico</td>
+                        <td>Se funde y se moldea</td>
+                        <td>Disminuye la contaminación</td>
+                    </tr>
+                    <tr>
+                        <td>Vidrio</td>
+                        <td>Se funde y se reutiliza</td>
+                        <td>Ahorra energía y recursos</td>
+                    </tr>
+                    <tr>
+                        <td>Metal</td>
+                        <td>Se funde y se reutiliza</td>
+                        <td>Reduce la minería</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="section">
+            <img src="https://cdn-icons-png.flaticon.com/512/4463/4463022.png" alt="Naturaleza">
+            <h2>¿Qué puedes hacer tú?</h2>
+            <p>Pequeñas acciones generan grandes cambios. ¡Empieza hoy!</p>
             <button class="button" onclick="irA('index.html')">Volver al Inicio</button>
         </section>
     </main>

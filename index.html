@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobach Verde</title>
+    <title>Cobach Verde - Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,11 +17,11 @@
             font-family: 'SF Pro Display', sans-serif;
             background-color: #f5f5f7;
             color: #333;
-            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            text-align: center;
         }
         header {
             width: 100%;
@@ -43,8 +43,7 @@
         }
         .hero {
             width: 100%;
-            height: 60vh;
-            background: url('https://source.unsplash.com/1920x1080/?forest,green') center/cover;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -53,14 +52,26 @@
             padding: 20px;
         }
         .hero h2 {
-            font-size: 2.5em;
-            font-weight: 600;
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
             margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
         }
         .hero p {
-            font-size: 1.3em;
+            font-size: 1.5em;
             max-width: 800px;
             margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .button {
             background-color: #d4f8d4;
@@ -78,55 +89,61 @@
         }
         .section {
             width: 80%;
-            max-width: 1000px;
+            max-width: 1200px;
             background-color: white;
             padding: 40px;
             margin: 50px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
         .section h2 {
-            font-size: 2em;
+            font-size: 2.5em;
+            font-family: 'Playfair Display', serif;
             margin-bottom: 20px;
+            color: #2c3e50;
         }
         .section p {
             font-size: 1.1em;
-            line-height: 1.6;
+            line-height: 1.8;
             margin-bottom: 20px;
-        }
-        .section img {
-            width: 150px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
-        }
-        .section img:hover {
-            transform: scale(1.1);
+            color: #555;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
         .card {
             background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover img {
+            transform: scale(1.1);
         }
         .card h3 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             margin-bottom: 10px;
+            color: #2c3e50;
         }
         .card p {
             font-size: 1em;
             line-height: 1.6;
+            color: #777;
         }
         .intro {
             width: 80%;
@@ -134,15 +151,15 @@
             background-color: white;
             padding: 40px;
             margin: 50px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             text-align: left;
         }
         .intro img {
             width: 300px;
-            border-radius: 10px;
+            border-radius: 15px;
             margin-right: 40px;
             transition: transform 0.3s ease;
         }
@@ -153,18 +170,69 @@
             flex: 1;
         }
         .intro-text h2 {
-            font-size: 2em;
+            font-size: 2.5em;
+            font-family: 'Playfair Display', serif;
             margin-bottom: 15px;
+            color: #2c3e50;
         }
         .intro-text p {
             font-size: 1.1em;
-            line-height: 1.6;
+            line-height: 1.8;
+            color: #555;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #d4f8d4;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            animation: slideIn 1s ease-in-out;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #d4f8d4;
+            border: 4px solid white;
+            border-radius: 50%;
+            top: 20px;
+            right: -10px;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         footer {
             width: 100%;
             background-color: white;
             color: black;
-            padding: 15px 0;
+            padding: 20px 0;
             margin-top: auto;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -173,10 +241,10 @@
                 font-size: 2.2em;
             }
             .hero h2 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             .hero p {
-                font-size: 1.1em;
+                font-size: 1.2em;
             }
             .section {
                 width: 90%;
@@ -191,24 +259,37 @@
                 margin-right: 0;
                 margin-bottom: 20px;
             }
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                text-align: left !important;
+            }
+            .timeline-item::after {
+                left: -10px !important;
+                right: auto;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <img src="https://media.discordapp.net/attachments/1327861081804242966/1347845134175436851/CobachVerde.png?ex=67cd4e19&is=67cbfc99&hm=2b0fa4e9cf0bca8107844c839a321f4371702ddcdcf5eb43ed3ed497646f7bf0&=&format=webp&quality=lossless" alt="Logo Cobach" class="logo">
+            <img src="https://iili.io/3qgPvjt.png" alt="Logo Cobach" class="logo">
         </a>
         <h1>Cobach Verde</h1>
     </header>
     <main>
         <section class="hero">
-            <h2>La naturaleza es vida, así que cuidala.</h2>
+            <h2>La naturaleza es vida, así que cuídala.</h2>
             <p>Explora cómo los árboles impactan positivamente en nuestro planeta y cómo puedes contribuir.</p>
-            <button class="button" onclick="irA('main.html')">Aprender más</button>
+            <div class="button-container">
+                <button class="button" onclick="irA('main.html')">Inicio</button>
+                <button class="button" onclick="irA('info.html')">Comparaciones</button>
+                <button class="button" onclick="irA('info2.html')">Calendarios</button>
+            </div>
         </section>
         <section class="intro">
-            <img src="https://media.discordapp.net/attachments/1327861081804242966/1347858215022628884/Sin_titulo_200_x_500_px.png?ex=67cd5a48&is=67cc08c8&hm=2b85374c5eaab8c4ba05f18582194af1fd81552db91928d5729b8cb0a7b9fb42&=&format=webp&quality=lossless" alt="Daniel Alejandro Félix Escobar" style="width: 200px;">
+            <img src="https://iili.io/3qg6ykN.png" alt="Daniel Alejandro Félix Escobar" style="width: 250px;">
             <div class="intro-text">
                 <h2>Sobre mí</h2>
                 <p>
@@ -220,7 +301,7 @@
             </div>
         </section>
         <section class="section">
-            <img src="https://media.discordapp.net/attachments/1327861081804242966/1347845134175436851/CobachVerde.png?ex=67cd4e19&is=67cbfc99&hm=2b0fa4e9cf0bca8107844c839a321f4371702ddcdcf5eb43ed3ed497646f7bf0&=&format=webp&quality=lossless" alt="Ecología">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Ecología" style="width: 180px;">
             <h2>¿Por qué unirte a Cobach Verde?</h2>
             <p>Descubre las razones por las que deberías ser parte de esta iniciativa y cómo puedes marcar la diferencia.</p>
             <div class="grid">
@@ -243,10 +324,29 @@
             </div>
         </section>
         <section class="section">
-            <img src="https://intermedia.eus/wp-content/uploads/2015/09/mision.png" alt="Mundo Ecológico">
-            <h2>Nuestra misión</h2>
-            <p>En Cobach Verde nos dedicamos a promover la reforestación y la conciencia ambiental en Hermosillo y más allá.</p>
-            <button class="button" onclick="irA('main.html')">Saber más</button>
+            <h2>Nuestra historia</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1975: Fundación del COBACH</h3>
+                    <p>El Colegio de Bachilleres se creó como una institución educativa de nivel medio superior en México.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1980: Expansión Nacional</h3>
+                    <p>COBACH comenzó a expandirse a otros estados de la República Mexicana, llegando a Sonora.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1995: Innovación Educativa</h3>
+                    <p>Se implementaron nuevos planes de estudio con enfoque en competencias y habilidades para el futuro.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2010: Reconocimiento Internacional</h3>
+                    <p>COBACH recibió reconocimientos por su calidad educativa y su contribución al desarrollo social.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Actualidad</h3>
+                    <p>Actualmente COBACH sigue operando 💪.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
